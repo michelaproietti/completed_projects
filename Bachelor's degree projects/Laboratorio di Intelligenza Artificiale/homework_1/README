@@ -1,12 +1,10 @@
-#############################################################################################
+ This homework consists in the creation of a C++ class wrapping an Orazio client.
+ Orazio is a firmware for mobile robots that can be used with different architectures.
  
-1) Sposta questa cartella all'interno di srrg2_orazio/srrg2_orazio
+ To run this code, Orazio software must be installed and then the following commands should be executed:
+ 
+	1) Move this folder in srrg2_orazio/srrg2_orazio
 
-2) Esegui il make in srrg2_orazio/srrg2_orazio/host_build
- 
-3) Esegui il make all'interno della cartella  srrg2_orazio/srrg2_orazio/homework_1 per
-	compilare il codice dell'esercitazione
+	2) Run make in srrg2_orazio/srrg2_orazio/host_build
 
-4) Esegui orazio_wrapper_test per controllare il risultato
- 
-#############################################################################################
+	3) Compile using make in this folder and check the solution with orazio_wrapper_test
