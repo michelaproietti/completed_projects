@@ -23,13 +23,21 @@ the turtles from the array when they are hit.
 
 To test the homework, you need to compile using catkin build and then:
 * Open a terminal where we execute the command
-	>>roscore
+	'''
+	$ roscore
+	'''
 * Open a terminal where we execute the command
-	>>rosrun turtlesim turtlesim_node
+	'''
+	$ rosrun turtlesim turtlesim_node
+	'''
 * Open a terminal where we start the server with the command
-	>>rosrun turtlesim tutorial_single_server
+	'''
+	$ rosrun turtlesim tutorial_single_server
+	'''
   that will allow us to move with the turtle to test the delete function.
 * Open a terminal used to execute the clients through the following commands
-	>>rosrun turtlesim tutorial_draw_circle
-	>>rosrun turtlesim tutorial_get_circle
-	>>rosrun turtlesim tutorial_delete_circle
+	'''
+	$ rosrun turtlesim tutorial_draw_circle
+	$ rosrun turtlesim tutorial_get_circle
+	$ rosrun turtlesim tutorial_delete_circle
+	'''
