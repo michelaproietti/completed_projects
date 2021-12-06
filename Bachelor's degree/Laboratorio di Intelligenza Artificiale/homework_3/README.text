@@ -1,0 +1,5 @@
+Il nodo edge_extractor_node si sottoscrive al topic "/default/camera_node/image/compressed"
+e, per ogni messaggio di tipo CompressedImage, chiama la funzione image_callBack.
+Tale funzione trasforma l'Image ROS in una Mat di OpenCV, effettua la conversione in grayscale e
+applica la GaussianBlur e la Canny su tale immagine. Infine, stampa l'immagine originale e quella
+filtrata.
