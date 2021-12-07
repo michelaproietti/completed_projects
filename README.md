@@ -3,9 +3,9 @@
 This repository contains all the projects I took part in, grouped according to the context in which they were developed.
 
 ## Table of contents
-* [Bachelor's degree projects](#bachelor)
-* [Master's degree projects](#master)
-* [Additional projects](#add)
+* [Bachelor's degree projects](#Bachelor's_degree_projects)
+* [Master's degree projects](#Master's_degree_projects)
+* [Additional projects](#Additional_projects)
 
 ## Bachelor's degree projects
 This folder contains the projects realized during the Bachelor's degree in Computer and Automation Engineering at Sapienza University of Rome. The following list contains the names of the courses and a brief description of the projects:
