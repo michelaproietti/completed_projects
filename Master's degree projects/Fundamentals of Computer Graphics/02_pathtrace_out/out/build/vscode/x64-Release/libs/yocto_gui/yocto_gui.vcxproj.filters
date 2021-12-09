@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\yocto_opengl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\yocto_shade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\yocto_imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\ext\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\ext\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\ext\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\ext\imgui\imgui_impl_glfw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\ext\imgui\imgui_impl_opengl3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\ext\glad\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\yocto_opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\yocto_shade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\yocto_imgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\miche\FCG\02_pathtrace_out\out\libs\yocto_gui\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3B741BC7-B3D9-3BCB-90CA-FF027291198E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{03BE9D17-7952-3E26-AF62-F2E3470F9CCF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

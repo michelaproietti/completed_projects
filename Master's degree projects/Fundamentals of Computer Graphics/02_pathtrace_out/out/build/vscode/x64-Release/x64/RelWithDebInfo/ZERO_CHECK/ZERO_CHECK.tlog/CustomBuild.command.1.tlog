@@ -1,0 +1,10 @@
+^C:\USERS\MICHE\FCG\02_PATHTRACE_OUT\OUT\BUILD\VSCODE\X64-RELEASE\CMAKEFILES\191565EEBCEEC8E5BD3E24815D195437\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/miche/FCG/02_pathtrace_out/out -BC:/Users/miche/FCG/02_pathtrace_out/out/build/vscode/x64-Release --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/miche/FCG/02_pathtrace_out/out/build/vscode/x64-Release/yocto_pathtrace.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
