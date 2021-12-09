@@ -1,0 +1,11 @@
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/CMakeFiles/ALL_BUILD.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/CMakeFiles/ZERO_CHECK.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/exts/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/exts/glfw/src/CMakeFiles/glfw.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/libs/yocto/CMakeFiles/yocto.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/libs/yocto_pathtrace/CMakeFiles/yocto_pathtrace.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/libs/yocto_gui/CMakeFiles/yocto_gui.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/apps/ypathtrace/CMakeFiles/ypathtrace.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/apps/ypathtrace_adp/CMakeFiles/ypathtrace_adp.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/apps/yipathtraces/CMakeFiles/yipathtraces.dir
+C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release/apps/yipathtraces_adp/CMakeFiles/yipathtraces_adp.dir

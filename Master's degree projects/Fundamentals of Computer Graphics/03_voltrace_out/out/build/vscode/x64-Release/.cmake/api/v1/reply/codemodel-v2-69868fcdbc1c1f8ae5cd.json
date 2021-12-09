@@ -1,0 +1,1348 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4,
+						8
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "exts",
+					"childIndexes" : 
+					[
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "exts"
+				},
+				{
+					"build" : "exts/glfw",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "exts/glfw",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "exts/glfw/src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "exts/glfw/src",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "libs",
+					"childIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libs"
+				},
+				{
+					"build" : "libs/yocto",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "libs/yocto_pathtrace",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_pathtrace",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "libs/yocto_gui",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_gui",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "apps",
+					"childIndexes" : 
+					[
+						9,
+						10,
+						11,
+						12
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps"
+				},
+				{
+					"build" : "apps/ypathtrace",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ypathtrace",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "apps/ypathtrace_adp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ypathtrace_adp",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "apps/yipathtraces",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yipathtraces",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "apps/yipathtraces_adp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yipathtraces_adp",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "yocto_volpathtrace",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-b0d00fb6cbcbb1c06b54.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@c7ea66bf90c920b4aebb",
+					"jsonFile" : "target-ALL_BUILD-Debug-9b467273813d90fa4699.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-cbac3323652bdeb93b6f.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glfw::@766e2fc5a7847ac43afc",
+					"jsonFile" : "target-glfw-Debug-70eccffb239ef55d64cb.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "yipathtraces::@00deefd9abff05ada3a3",
+					"jsonFile" : "target-yipathtraces-Debug-97d6092eecf7615ac79a.json",
+					"name" : "yipathtraces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "yipathtraces_adp::@09d5d709c08076ce6635",
+					"jsonFile" : "target-yipathtraces_adp-Debug-349526bd3748bf2ab62e.json",
+					"name" : "yipathtraces_adp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "yocto::@e229a39159fb9a4cdeaa",
+					"jsonFile" : "target-yocto-Debug-118440cbcd7d28b30f97.json",
+					"name" : "yocto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "yocto_gui::@e5da5306e8018ef5ac42",
+					"jsonFile" : "target-yocto_gui-Debug-c3187adde91b7bc42165.json",
+					"name" : "yocto_gui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "yocto_pathtrace::@45510c61010f0b3d598e",
+					"jsonFile" : "target-yocto_pathtrace-Debug-9cc1f8da431ddb641332.json",
+					"name" : "yocto_pathtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ypathtrace::@9daf165e6a3f12e3cb86",
+					"jsonFile" : "target-ypathtrace-Debug-0a25477c4da120638069.json",
+					"name" : "ypathtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ypathtrace_adp::@d2952828c0da2ea9d126",
+					"jsonFile" : "target-ypathtrace_adp-Debug-d0ac38eda82285a16126.json",
+					"name" : "ypathtrace_adp",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4,
+						8
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "exts",
+					"childIndexes" : 
+					[
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "exts"
+				},
+				{
+					"build" : "exts/glfw",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "exts/glfw",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "exts/glfw/src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "exts/glfw/src",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "libs",
+					"childIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libs"
+				},
+				{
+					"build" : "libs/yocto",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "libs/yocto_pathtrace",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_pathtrace",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "libs/yocto_gui",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_gui",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "apps",
+					"childIndexes" : 
+					[
+						9,
+						10,
+						11,
+						12
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps"
+				},
+				{
+					"build" : "apps/ypathtrace",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ypathtrace",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "apps/ypathtrace_adp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ypathtrace_adp",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "apps/yipathtraces",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yipathtraces",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "apps/yipathtraces_adp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yipathtraces_adp",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "yocto_volpathtrace",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-b0d00fb6cbcbb1c06b54.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@c7ea66bf90c920b4aebb",
+					"jsonFile" : "target-ALL_BUILD-Release-9b467273813d90fa4699.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-cbac3323652bdeb93b6f.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glfw::@766e2fc5a7847ac43afc",
+					"jsonFile" : "target-glfw-Release-3695486ad797e4a4148f.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "yipathtraces::@00deefd9abff05ada3a3",
+					"jsonFile" : "target-yipathtraces-Release-3ae6704b92a73b354779.json",
+					"name" : "yipathtraces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "yipathtraces_adp::@09d5d709c08076ce6635",
+					"jsonFile" : "target-yipathtraces_adp-Release-a6eaa3e91bf411af2dd5.json",
+					"name" : "yipathtraces_adp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "yocto::@e229a39159fb9a4cdeaa",
+					"jsonFile" : "target-yocto-Release-a0f4670e76bef9cdcf5f.json",
+					"name" : "yocto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "yocto_gui::@e5da5306e8018ef5ac42",
+					"jsonFile" : "target-yocto_gui-Release-3655b70d5fb6550ed6b3.json",
+					"name" : "yocto_gui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "yocto_pathtrace::@45510c61010f0b3d598e",
+					"jsonFile" : "target-yocto_pathtrace-Release-3d8ce7dd50a3cda3b1cc.json",
+					"name" : "yocto_pathtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ypathtrace::@9daf165e6a3f12e3cb86",
+					"jsonFile" : "target-ypathtrace-Release-8a4fd727ce60bd573268.json",
+					"name" : "ypathtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ypathtrace_adp::@d2952828c0da2ea9d126",
+					"jsonFile" : "target-ypathtrace_adp-Release-3f99025b675f9dcda6a1.json",
+					"name" : "ypathtrace_adp",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4,
+						8
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "exts",
+					"childIndexes" : 
+					[
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "exts"
+				},
+				{
+					"build" : "exts/glfw",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "exts/glfw",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "exts/glfw/src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "exts/glfw/src",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "libs",
+					"childIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libs"
+				},
+				{
+					"build" : "libs/yocto",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "libs/yocto_pathtrace",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_pathtrace",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "libs/yocto_gui",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_gui",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "apps",
+					"childIndexes" : 
+					[
+						9,
+						10,
+						11,
+						12
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps"
+				},
+				{
+					"build" : "apps/ypathtrace",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ypathtrace",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "apps/ypathtrace_adp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ypathtrace_adp",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "apps/yipathtraces",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yipathtraces",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "apps/yipathtraces_adp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yipathtraces_adp",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "yocto_volpathtrace",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-b0d00fb6cbcbb1c06b54.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@c7ea66bf90c920b4aebb",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-9b467273813d90fa4699.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-cbac3323652bdeb93b6f.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glfw::@766e2fc5a7847ac43afc",
+					"jsonFile" : "target-glfw-MinSizeRel-45edcdeea5ade25d45d1.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "yipathtraces::@00deefd9abff05ada3a3",
+					"jsonFile" : "target-yipathtraces-MinSizeRel-a818767caf708cb30598.json",
+					"name" : "yipathtraces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "yipathtraces_adp::@09d5d709c08076ce6635",
+					"jsonFile" : "target-yipathtraces_adp-MinSizeRel-7f676ba6c108b99a55fb.json",
+					"name" : "yipathtraces_adp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "yocto::@e229a39159fb9a4cdeaa",
+					"jsonFile" : "target-yocto-MinSizeRel-88bf54f51a3d105aee15.json",
+					"name" : "yocto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "yocto_gui::@e5da5306e8018ef5ac42",
+					"jsonFile" : "target-yocto_gui-MinSizeRel-3e40152502d43ec4ff3a.json",
+					"name" : "yocto_gui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "yocto_pathtrace::@45510c61010f0b3d598e",
+					"jsonFile" : "target-yocto_pathtrace-MinSizeRel-b69953e92b84516dbb80.json",
+					"name" : "yocto_pathtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ypathtrace::@9daf165e6a3f12e3cb86",
+					"jsonFile" : "target-ypathtrace-MinSizeRel-25ff2e6e09f2832b7211.json",
+					"name" : "ypathtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ypathtrace_adp::@d2952828c0da2ea9d126",
+					"jsonFile" : "target-ypathtrace_adp-MinSizeRel-00e008eac585ee9d30d8.json",
+					"name" : "ypathtrace_adp",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4,
+						8
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "exts",
+					"childIndexes" : 
+					[
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "exts"
+				},
+				{
+					"build" : "exts/glfw",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "exts/glfw",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "exts/glfw/src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "exts/glfw/src",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "libs",
+					"childIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "libs"
+				},
+				{
+					"build" : "libs/yocto",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "libs/yocto_pathtrace",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_pathtrace",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "libs/yocto_gui",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "libs/yocto_gui",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "apps",
+					"childIndexes" : 
+					[
+						9,
+						10,
+						11,
+						12
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "apps"
+				},
+				{
+					"build" : "apps/ypathtrace",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ypathtrace",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "apps/ypathtrace_adp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/ypathtrace_adp",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "apps/yipathtraces",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yipathtraces",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "apps/yipathtraces_adp",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 0,
+					"source" : "apps/yipathtraces_adp",
+					"targetIndexes" : 
+					[
+						5
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "yocto_volpathtrace",
+					"targetIndexes" : 
+					[
+						0,
+						2,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-b0d00fb6cbcbb1c06b54.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ALL_BUILD::@c7ea66bf90c920b4aebb",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-9b467273813d90fa4699.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-cbac3323652bdeb93b6f.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "glfw::@766e2fc5a7847ac43afc",
+					"jsonFile" : "target-glfw-RelWithDebInfo-fe215573ab69cc12562c.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "yipathtraces::@00deefd9abff05ada3a3",
+					"jsonFile" : "target-yipathtraces-RelWithDebInfo-dd679ad42214bc6baaa1.json",
+					"name" : "yipathtraces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "yipathtraces_adp::@09d5d709c08076ce6635",
+					"jsonFile" : "target-yipathtraces_adp-RelWithDebInfo-fabdd5e4e72f16bd44ac.json",
+					"name" : "yipathtraces_adp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "yocto::@e229a39159fb9a4cdeaa",
+					"jsonFile" : "target-yocto-RelWithDebInfo-5ed7391fe53e6160ae44.json",
+					"name" : "yocto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "yocto_gui::@e5da5306e8018ef5ac42",
+					"jsonFile" : "target-yocto_gui-RelWithDebInfo-0bb3f7814608eb14039f.json",
+					"name" : "yocto_gui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "yocto_pathtrace::@45510c61010f0b3d598e",
+					"jsonFile" : "target-yocto_pathtrace-RelWithDebInfo-586634178cee929f77c4.json",
+					"name" : "yocto_pathtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ypathtrace::@9daf165e6a3f12e3cb86",
+					"jsonFile" : "target-ypathtrace-RelWithDebInfo-068e26a682fbb3317403.json",
+					"name" : "ypathtrace",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ypathtrace_adp::@d2952828c0da2ea9d126",
+					"jsonFile" : "target-ypathtrace_adp-RelWithDebInfo-f46fbd30efef6261c2c9.json",
+					"name" : "ypathtrace_adp",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/miche/FCG/03_voltrace_out/out/build/vscode/x64-Release",
+		"source" : "C:/Users/miche/FCG/03_voltrace_out/out"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}
