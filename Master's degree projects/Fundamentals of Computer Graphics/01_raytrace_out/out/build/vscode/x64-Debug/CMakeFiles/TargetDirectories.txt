@@ -1,0 +1,9 @@
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/CMakeFiles/ALL_BUILD.dir
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/CMakeFiles/ZERO_CHECK.dir
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/exts/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/exts/glfw/src/CMakeFiles/glfw.dir
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/libs/yocto/CMakeFiles/yocto.dir
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/libs/yocto_raytrace/CMakeFiles/yocto_raytrace.dir
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/libs/yocto_gui/CMakeFiles/yocto_gui.dir
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/apps/yraytrace/CMakeFiles/yraytrace.dir
+C:/Users/miche/FCG/01_raytrace_out/out/build/vscode/x64-Debug/apps/yiraytraces/CMakeFiles/yiraytraces.dir

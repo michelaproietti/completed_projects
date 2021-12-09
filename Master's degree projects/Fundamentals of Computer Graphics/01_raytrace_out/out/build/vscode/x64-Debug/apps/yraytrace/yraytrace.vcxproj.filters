@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\miche\FCG\01_raytrace_out\out\apps\yraytrace\yraytrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\miche\FCG\01_raytrace_out\out\apps\yraytrace\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C627F403-7CA5-358D-8508-FA5D61908F61}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
