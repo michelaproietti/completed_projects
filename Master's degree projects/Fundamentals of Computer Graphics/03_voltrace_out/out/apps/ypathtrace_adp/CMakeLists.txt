@@ -1,0 +1,5 @@
+add_executable(ypathtrace_adp ypathtrace_adp.cpp)
+
+set_target_properties(ypathtrace_adp PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED YES)
+target_include_directories(ypathtrace_adp PUBLIC ${CMAKE_SOURCE_DIR}/libs)
+target_link_libraries(ypathtrace_adp yocto yocto_pathtrace)

@@ -1,0 +1,310 @@
+{
+  "asset": {},
+  "cameras": {
+    "camera1": {
+      "aspect": 1.7777777910232544,
+      "focus": 10.0,
+      "frame": [
+        0.8328009843826294,
+        -0.0,
+        0.5535730123519897,
+        0.18235300481319427,
+        0.9441869854927063,
+        -0.27433401346206665,
+        -0.5226770043373108,
+        0.32941100001335144,
+        0.7863190174102783,
+        1.268967628479004,
+        5.083194732666016,
+        8.197000503540039
+      ],
+      "lens": 0.031176913529634476
+    }
+  },
+  "environments": {
+    "environment1": {
+      "emission": [1.0, 1.0, 1.0],
+      "emission_tex": "texture1",
+      "frame": [-1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0]
+    }
+  },
+  "materials": {
+    "material1": {
+      "color": [0.800000011920929, 0.800000011920929, 0.800000011920929],
+      "displacement": 1.0
+    },
+    "material10": {
+      "color": [0.137254998087883, 0.09411799907684326, 0.06666699796915054],
+      "displacement": 1.0
+    },
+    "material11": {
+      "color": [0.02899100072681904, 0.02899100072681904, 0.02899100072681904],
+      "displacement": 1.0
+    },
+    "material12": {
+      "color": [0.5607839822769165, 0.5607839822769165, 0.2784309983253479],
+      "displacement": 1.0
+    },
+    "material13": {
+      "color": [0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+      "displacement": 1.0
+    },
+    "material14": {
+      "displacement": 1.0
+    },
+    "material2": {
+      "color": [0.6875475645065308, 0.6490657925605774, 0.6870107650756836],
+      "displacement": 1.0,
+      "roughness": 0.10000000149011612
+    },
+    "material3": {
+      "color": [0.5785959959030151, 0.5785959959030151, 0.5785959959030151],
+      "displacement": 1.0
+    },
+    "material4": {
+      "color": [1.0, 1.0, 1.0],
+      "displacement": 1.0,
+      "specular": 1.0,
+      "transmission": 1.0
+    },
+    "material5": {
+      "color": [0.09483499825000763, 0.1402059942483902, 1.0],
+      "displacement": 1.0,
+      "roughness": 0.03162277862429619,
+      "specular": 0.03999999910593033
+    },
+    "material6": {
+      "color": [
+        0.009999999776482582,
+        0.009999999776482582,
+        0.009999999776482582
+      ],
+      "displacement": 1.0,
+      "roughness": 0.6324555277824402,
+      "specular": 0.03999999910593033
+    },
+    "material7": {
+      "color": [0.6875475645065308, 0.6490657925605774, 0.6870107650756836],
+      "displacement": 1.0,
+      "roughness": 0.3162277638912201
+    },
+    "material8": {
+      "color": [0.4745100140571594, 0.4745100140571594, 0.4745100140571594],
+      "displacement": 1.0,
+      "roughness": 0.6324555277824402,
+      "specular": 0.03999999910593033
+    },
+    "material9": {
+      "color": [0.10000000149011612, 0.10000000149011612, 0.10000000149011612],
+      "displacement": 1.0
+    }
+  },
+  "instances": {
+    "object1": {
+      "material": "material1",
+      "shape": "shape1"
+    },
+    "object10": {
+      "material": "material2",
+      "shape": "shape10"
+    },
+    "object11": {
+      "material": "material5",
+      "shape": "shape11"
+    },
+    "object12": {
+      "material": "material2",
+      "shape": "shape12"
+    },
+    "object13": {
+      "material": "material5",
+      "shape": "shape13"
+    },
+    "object14": {
+      "material": "material5",
+      "shape": "shape14"
+    },
+    "object15": {
+      "material": "material6",
+      "shape": "shape15"
+    },
+    "object16": {
+      "material": "material1",
+      "shape": "shape16"
+    },
+    "object17": {
+      "material": "material7",
+      "shape": "shape17"
+    },
+    "object18": {
+      "material": "material7",
+      "shape": "shape18"
+    },
+    "object19": {
+      "material": "material7",
+      "shape": "shape19"
+    },
+    "object2": {
+      "material": "material1",
+      "shape": "shape2"
+    },
+    "object20": {
+      "material": "material7",
+      "shape": "shape20"
+    },
+    "object21": {
+      "material": "material6",
+      "shape": "shape21"
+    },
+    "object22": {
+      "material": "material8",
+      "shape": "shape22"
+    },
+    "object23": {
+      "material": "material2",
+      "shape": "shape23"
+    },
+    "object24": {
+      "material": "material2",
+      "shape": "shape24"
+    },
+    "object25": {
+      "material": "material2",
+      "shape": "shape25"
+    },
+    "object26": {
+      "material": "material2",
+      "shape": "shape26"
+    },
+    "object27": {
+      "material": "material4",
+      "shape": "shape27"
+    },
+    "object28": {
+      "material": "material4",
+      "shape": "shape28"
+    },
+    "object29": {
+      "material": "material9",
+      "shape": "shape29"
+    },
+    "object3": {
+      "material": "material1",
+      "shape": "shape3"
+    },
+    "object30": {
+      "material": "material9",
+      "shape": "shape30"
+    },
+    "object31": {
+      "material": "material9",
+      "shape": "shape31"
+    },
+    "object32": {
+      "material": "material9",
+      "shape": "shape32"
+    },
+    "object33": {
+      "material": "material9",
+      "shape": "shape33"
+    },
+    "object34": {
+      "material": "material10",
+      "shape": "shape34"
+    },
+    "object35": {
+      "material": "material2",
+      "shape": "shape35"
+    },
+    "object36": {
+      "material": "material2",
+      "shape": "shape36"
+    },
+    "object37": {
+      "material": "material7",
+      "shape": "shape37"
+    },
+    "object38": {
+      "material": "material2",
+      "shape": "shape38"
+    },
+    "object39": {
+      "material": "material2",
+      "shape": "shape39"
+    },
+    "object4": {
+      "material": "material2",
+      "shape": "shape4"
+    },
+    "object40": {
+      "material": "material11",
+      "shape": "shape40"
+    },
+    "object41": {
+      "material": "material12",
+      "shape": "shape41"
+    },
+    "object42": {
+      "material": "material7",
+      "shape": "shape42"
+    },
+    "object43": {
+      "material": "material7",
+      "shape": "shape43"
+    },
+    "object44": {
+      "material": "material7",
+      "shape": "shape44"
+    },
+    "object45": {
+      "material": "material5",
+      "shape": "shape45"
+    },
+    "object46": {
+      "material": "material9",
+      "shape": "shape46"
+    },
+    "object47": {
+      "material": "material9",
+      "shape": "shape47"
+    },
+    "object48": {
+      "frame": [
+        0.819566011428833,
+        0.0,
+        -0.572983980178833,
+        0.0,
+        1.0,
+        0.0,
+        0.572983980178833,
+        0.0,
+        0.819566011428833,
+        30.909700393676758,
+        9.471369743347168,
+        -4.603030204772949
+      ],
+      "material": "material13",
+      "shape": "shape48"
+    },
+    "object5": {
+      "material": "material3",
+      "shape": "shape5"
+    },
+    "object6": {
+      "material": "material2",
+      "shape": "shape6"
+    },
+    "object7": {
+      "material": "material2",
+      "shape": "shape7"
+    },
+    "object8": {
+      "material": "material2",
+      "shape": "shape8"
+    },
+    "object9": {
+      "material": "material4",
+      "shape": "shape9"
+    }
+  }
+}

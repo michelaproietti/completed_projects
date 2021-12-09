@@ -1,0 +1,1 @@
+Model by Jan-Walter Schliep, Burak Kahraman, Timm Dapper from pbrt.org/scenes-v3.html

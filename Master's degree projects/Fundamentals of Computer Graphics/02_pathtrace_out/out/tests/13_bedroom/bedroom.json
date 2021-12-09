@@ -1,0 +1,543 @@
+{
+  "asset": {},
+  "cameras": {
+    "camera1": {
+      "aspect": 1.7777777910232544,
+      "focus": 10.0,
+      "frame": [
+        0.6535919904708862,
+        -9.313220195039662e-10,
+        -0.7568470239639282,
+        -0.012855599634349346,
+        0.9998559951782227,
+        -0.01110180001705885,
+        0.756738007068634,
+        0.016985800117254257,
+        0.6534979939460754,
+        3.4555814266204834,
+        1.2124333381652832,
+        3.2989675998687744
+      ],
+      "lens": 0.02825433947145939
+    }
+  },
+  "materials": {
+    "material1": {
+      "color": [0.9280474185943604, 0.9178045988082886, 0.9189086556434631],
+      "displacement": 1.0,
+      "roughness": 0.4472135901451111
+    },
+    "material10": {
+      "color": [0.09896399825811386, 0.09896399825811386, 0.09896399825811386],
+      "displacement": 1.0
+    },
+    "material11": {
+      "color": [0.5585439801216125, 0.5585439801216125, 0.5585439801216125],
+      "displacement": 1.0
+    },
+    "material12": {
+      "color": [0.5585430264472961, 0.5585430264472961, 0.5585430264472961],
+      "displacement": 1.0
+    },
+    "material13": {
+      "displacement": 1.0
+    },
+    "material14": {
+      "color": [0.5670269727706909, 0.5670269727706909, 0.5670269727706909],
+      "displacement": 1.0
+    },
+    "material15": {
+      "color": [1.0, 1.0, 1.0],
+      "displacement": 0.5310490131378174,
+      "opacity": 0.5310490131378174,
+      "roughness": 0.6795293092727661,
+      "specular": 1.0
+    },
+    "material16": {
+      "color": [1.0, 1.0, 1.0],
+      "color_tex": "texture3",
+      "displacement": 1.0
+    },
+    "material17": {
+      "color": [1.0, 1.0, 1.0],
+      "displacement": 1.0,
+      "specular": 1.0,
+      "thin": false,
+      "transmission": 1.0
+    },
+    "material18": {
+      "color": [1.0, 1.0, 1.0],
+      "displacement": 1.0,
+      "specular": 1.0,
+      "thin": false,
+      "transmission": 1.0
+    },
+    "material19": {
+      "color": [0.8932890295982361, 0.8932890295982361, 0.8932890295982361],
+      "displacement": 1.0
+    },
+    "material2": {
+      "color": [1.0, 1.0, 1.0],
+      "color_tex": "texture1",
+      "displacement": 1.0,
+      "roughness": 0.3872983455657959,
+      "specular": 0.03999999910593033
+    },
+    "material20": {
+      "color": [0.03449900075793266, 0.03449900075793266, 0.03449900075793266],
+      "displacement": 1.0
+    },
+    "material21": {
+      "color": [
+        0.015395999886095524,
+        0.015395999886095524,
+        0.015395999886095524
+      ],
+      "displacement": 1.0
+    },
+    "material22": {
+      "color": [0.9280474185943604, 0.9178045988082886, 0.9189086556434631],
+      "displacement": 1.0,
+      "roughness": 0.3162277638912201
+    },
+    "material23": {
+      "color": [0.8999999761581421, 0.8999999761581421, 0.8999999761581421],
+      "displacement": 1.0,
+      "metallic": 1.0
+    },
+    "material24": {
+      "color": [0.7999989986419678, 0.7999989986419678, 0.7999989986419678],
+      "displacement": 1.0
+    },
+    "material25": {
+      "color": [
+        0.028172999620437622,
+        0.028172999620437622,
+        0.028172999620437622
+      ],
+      "displacement": 1.0
+    },
+    "material26": {
+      "color": [0.7999989986419678, 0.7999989986419678, 0.7999989986419678],
+      "displacement": 1.0
+    },
+    "material27": {
+      "color": [0.9280474185943604, 0.9178045988082886, 0.9189086556434631],
+      "displacement": 1.0,
+      "roughness": 0.3162277638912201
+    },
+    "material28": {
+      "color": [0.11156699806451797, 0.037067998200654984, 0.01701599918305874],
+      "displacement": 1.0
+    },
+    "material29": {
+      "color": [1.0, 1.0, 1.0],
+      "color_tex": "texture4",
+      "displacement": 1.0
+    },
+    "material3": {
+      "color": [0.8999999761581421, 0.8999999761581421, 0.8999999761581421],
+      "displacement": 1.0,
+      "metallic": 1.0
+    },
+    "material30": {
+      "color": [0.48304399847984314, 0.38466399908065796, 0.30156099796295166],
+      "displacement": 1.0
+    },
+    "material31": {
+      "color": [0.48543500900268555, 0.45626300573349, 0.42807498574256897],
+      "displacement": 1.0
+    },
+    "material32": {
+      "displacement": 1.0,
+      "emission": [16.464799880981445, 16.464799880981445, 16.464799880981445]
+    },
+    "material33": {
+      "displacement": 1.0,
+      "emission": [16.464799880981445, 16.464799880981445, 16.464799880981445]
+    },
+    "material34": {
+      "displacement": 1.0
+    },
+    "material4": {
+      "color": [1.0, 1.0, 1.0],
+      "displacement": 1.0,
+      "roughness": 0.3162277638912201,
+      "specular": 1.0,
+      "thin": false,
+      "transmission": 1.0
+    },
+    "material5": {
+      "color": [0.9280474185943604, 0.9178045988082886, 0.9189086556434631],
+      "displacement": 1.0,
+      "roughness": 0.3162277638912201
+    },
+    "material6": {
+      "color": [0.6399999856948853, 0.6399999856948853, 0.6399999856948853],
+      "displacement": 1.0
+    },
+    "material7": {
+      "color": [1.0, 1.0, 1.0],
+      "color_tex": "texture2",
+      "displacement": 1.0,
+      "roughness": 0.3872983455657959,
+      "specular": 0.03999999910593033
+    },
+    "material8": {
+      "color": [0.04177200049161911, 0.01130599994212389, 0.007575000170618296],
+      "displacement": 1.0
+    },
+    "material9": {
+      "color": [0.35082700848579407, 0.24298599362373352, 0.17882999777793884],
+      "displacement": 1.0
+    }
+  },
+  "instances": {
+    "object1": {
+      "material": "material1",
+      "shape": "shape1"
+    },
+    "object10": {
+      "material": "material1",
+      "shape": "shape10"
+    },
+    "object11": {
+      "material": "material1",
+      "shape": "shape11"
+    },
+    "object12": {
+      "material": "material4",
+      "shape": "shape12"
+    },
+    "object13": {
+      "material": "material4",
+      "shape": "shape13"
+    },
+    "object17": {
+      "material": "material7",
+      "shape": "shape17"
+    },
+    "object18": {
+      "material": "material8",
+      "shape": "shape18"
+    },
+    "object19": {
+      "material": "material9",
+      "shape": "shape19"
+    },
+    "object2": {
+      "material": "material1",
+      "shape": "shape2"
+    },
+    "object20": {
+      "material": "material10",
+      "shape": "shape20"
+    },
+    "object21": {
+      "material": "material11",
+      "shape": "shape21"
+    },
+    "object22": {
+      "material": "material4",
+      "shape": "shape22"
+    },
+    "object23": {
+      "material": "material5",
+      "shape": "shape23"
+    },
+    "object24": {
+      "material": "material12",
+      "shape": "shape24"
+    },
+    "object25": {
+      "material": "material6",
+      "shape": "shape25"
+    },
+    "object26": {
+      "material": "material4",
+      "shape": "shape26"
+    },
+    "object27": {
+      "material": "material5",
+      "shape": "shape27"
+    },
+    "object28": {
+      "material": "material12",
+      "shape": "shape28"
+    },
+    "object29": {
+      "material": "material6",
+      "shape": "shape29"
+    },
+    "object3": {
+      "material": "material2",
+      "shape": "shape3"
+    },
+    "object30": {
+      "material": "material13",
+      "shape": "shape30"
+    },
+    "object31": {
+      "material": "material14",
+      "shape": "shape31"
+    },
+    "object32": {
+      "material": "material15",
+      "shape": "shape32"
+    },
+    "object33": {
+      "material": "material16",
+      "shape": "shape33"
+    },
+    "object34": {
+      "material": "material17",
+      "shape": "shape34"
+    },
+    "object35": {
+      "material": "material18",
+      "shape": "shape35"
+    },
+    "object36": {
+      "material": "material18",
+      "shape": "shape36"
+    },
+    "object37": {
+      "material": "material16",
+      "shape": "shape37"
+    },
+    "object38": {
+      "material": "material16",
+      "shape": "shape38"
+    },
+    "object39": {
+      "material": "material19",
+      "shape": "shape39"
+    },
+    "object4": {
+      "material": "material3",
+      "shape": "shape4"
+    },
+    "object40": {
+      "frame": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -0.44185200333595276,
+        0.0,
+        0.0
+      ],
+      "material": "material20",
+      "shape": "shape40"
+    },
+    "object41": {
+      "frame": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -0.44185200333595276,
+        0.0,
+        0.0
+      ],
+      "material": "material20",
+      "shape": "shape41"
+    },
+    "object42": {
+      "frame": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -0.10999999940395355,
+        0.0,
+        0.0
+      ],
+      "material": "material21",
+      "shape": "shape42"
+    },
+    "object43": {
+      "frame": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -0.23589900135993958,
+        0.0,
+        0.0
+      ],
+      "material": "material21",
+      "shape": "shape43"
+    },
+    "object44": {
+      "material": "material22",
+      "shape": "shape44"
+    },
+    "object45": {
+      "material": "material22",
+      "shape": "shape45"
+    },
+    "object46": {
+      "material": "material2",
+      "shape": "shape46"
+    },
+    "object47": {
+      "material": "material23",
+      "shape": "shape47"
+    },
+    "object48": {
+      "material": "material24",
+      "shape": "shape48"
+    },
+    "object49": {
+      "material": "material25",
+      "shape": "shape49"
+    },
+    "object5": {
+      "material": "material1",
+      "shape": "shape5"
+    },
+    "object50": {
+      "material": "material25",
+      "shape": "shape50"
+    },
+    "object51": {
+      "material": "material2",
+      "shape": "shape51"
+    },
+    "object52": {
+      "material": "material3",
+      "shape": "shape52"
+    },
+    "object53": {
+      "material": "material23",
+      "shape": "shape53"
+    },
+    "object54": {
+      "material": "material2",
+      "shape": "shape54"
+    },
+    "object55": {
+      "material": "material3",
+      "shape": "shape55"
+    },
+    "object56": {
+      "material": "material2",
+      "shape": "shape56"
+    },
+    "object57": {
+      "material": "material3",
+      "shape": "shape57"
+    },
+    "object58": {
+      "material": "material26",
+      "shape": "shape58"
+    },
+    "object59": {
+      "material": "material2",
+      "shape": "shape59"
+    },
+    "object6": {
+      "material": "material1",
+      "shape": "shape6"
+    },
+    "object60": {
+      "material": "material2",
+      "shape": "shape60"
+    },
+    "object61": {
+      "material": "material3",
+      "shape": "shape61"
+    },
+    "object62": {
+      "material": "material15",
+      "shape": "shape62"
+    },
+    "object63": {
+      "material": "material27",
+      "shape": "shape63"
+    },
+    "object64": {
+      "material": "material28",
+      "shape": "shape64"
+    },
+    "object65": {
+      "material": "material29",
+      "shape": "shape65"
+    },
+    "object66": {
+      "material": "material30",
+      "shape": "shape66"
+    },
+    "object67": {
+      "material": "material31",
+      "shape": "shape67"
+    },
+    "object68": {
+      "material": "material31",
+      "shape": "shape68"
+    },
+    "object69": {
+      "material": "material31",
+      "shape": "shape69"
+    },
+    "object7": {
+      "material": "material1",
+      "shape": "shape7"
+    },
+    "object70": {
+      "material": "material32",
+      "shape": "shape70"
+    },
+    "object71": {
+      "material": "material33",
+      "shape": "shape71"
+    },
+    "object72": {
+      "frame": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -1.1021000146865845,
+        0.09580429643392563,
+        0.0
+      ],
+      "material": "material21",
+      "shape": "shape72"
+    },
+    "object8": {
+      "material": "material1",
+      "shape": "shape8"
+    },
+    "object9": {
+      "material": "material1",
+      "shape": "shape9"
+    }
+  }
+}

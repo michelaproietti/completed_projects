@@ -1,0 +1,19 @@
+ply
+format binary_little_endian 1.0
+comment Written by Yocto/GL
+comment https://github.com/xelatihy/yocto-gl
+element instance 6
+property float xx
+property float xy
+property float xz
+property float yx
+property float yy
+property float yz
+property float zx
+property float zy
+property float zz
+property float ox
+property float oy
+property float oz
+end_header
+I8$=¡>½Æ–¿©·7½–?­BD½¼!–?¯*>=Ñ´=Ú¹‚EX•@nðõDò‡{½“ú¼t>J¿Ì½ß³J?¶/æ¼V8J?ÝÂú<Š-€½oq;Å®“Có‚E¼õl¿ô»»¼°:¤>ªg¼9·z?†ïî<}¤¾É»<6êl¿–~E7È@¾‹ENM¿¦Õ¤¼Õˆä>~Ñþ»0½j?YDà<a»ä¾Ïß¤<5M¿t|DC¸YŠE‹®¾!ï(½Ã®‰¿ý[K½|Y?zû¼ £‰?H)=s‚¾ŒqÅIÚ<C8NŒEð¯J¿™ ¼ôˆ>óYI¼%âU?GŸË<ž-‰¾b¤ <F¦J¿Ë£0Ä6I#Bx„E

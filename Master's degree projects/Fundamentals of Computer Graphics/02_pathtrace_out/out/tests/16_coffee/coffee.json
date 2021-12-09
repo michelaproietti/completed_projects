@@ -1,0 +1,169 @@
+{
+  "asset": {},
+  "cameras": {
+    "camera1": {
+      "aspect": 0.800000011920929,
+      "focus": 10.0,
+      "frame": [
+        0.9999740123748779,
+        -0.0,
+        0.00727113988250494,
+        0.00028589199064299464,
+        0.999226987361908,
+        -0.03931770101189613,
+        -0.007265519816428423,
+        0.03931869938969612,
+        0.9991999864578247,
+        -0.002960039069876075,
+        0.1983031928539276,
+        0.8281505107879639
+      ],
+      "lens": 0.06495420634746552
+    }
+  },
+  "materials": {
+    "material1": {
+      "color": [
+        0.006310000084340572,
+        0.006310000084340572,
+        0.006310000084340572
+      ],
+      "displacement": 1.0,
+      "roughness": 0.3162277638912201,
+      "specular": 0.03999999910593033
+    },
+    "material2": {
+      "color": [1.0, 1.0, 1.0],
+      "displacement": 1.0,
+      "specular": 1.0,
+      "thin": false,
+      "transmission": 1.0
+    },
+    "material3": {
+      "color": [1.0, 0.37867599725723267, 0.01347300037741661],
+      "displacement": 1.0,
+      "roughness": 0.03162277862429619,
+      "specular": 0.03999999910593033
+    },
+    "material4": {
+      "color": [0.8999999761581421, 0.8999999761581421, 0.8999999761581421],
+      "displacement": 1.0,
+      "metallic": 1.0
+    },
+    "material5": {
+      "color": [0.5785959959030151, 0.5785959959030151, 0.5785959959030151],
+      "displacement": 1.0,
+      "roughness": 0.03162277862429619,
+      "specular": 0.03999999910593033
+    },
+    "material6": {
+      "displacement": 1.0,
+      "emission": [2.0, 2.0, 2.0]
+    },
+    "material7": {
+      "displacement": 1.0,
+      "emission": [2.0, 2.0, 2.0]
+    },
+    "material8": {
+      "displacement": 1.0,
+      "emission": [2.0, 2.0, 2.0]
+    },
+    "material9": {
+      "displacement": 1.0
+    }
+  },
+  "instances": {
+    "object1": {
+      "material": "material1",
+      "shape": "shape1"
+    },
+    "object10": {
+      "material": "material1",
+      "shape": "shape10"
+    },
+    "object11": {
+      "material": "material1",
+      "shape": "shape11"
+    },
+    "object12": {
+      "material": "material3",
+      "shape": "shape12"
+    },
+    "object13": {
+      "material": "material1",
+      "shape": "shape13"
+    },
+    "object14": {
+      "material": "material1",
+      "shape": "shape14"
+    },
+    "object15": {
+      "material": "material4",
+      "shape": "shape15"
+    },
+    "object16": {
+      "material": "material3",
+      "shape": "shape16"
+    },
+    "object17": {
+      "material": "material1",
+      "shape": "shape17"
+    },
+    "object18": {
+      "material": "material3",
+      "shape": "shape18"
+    },
+    "object19": {
+      "material": "material1",
+      "shape": "shape19"
+    },
+    "object2": {
+      "material": "material1",
+      "shape": "shape2"
+    },
+    "object20": {
+      "material": "material5",
+      "shape": "shape20"
+    },
+    "object21": {
+      "material": "material6",
+      "shape": "shape21"
+    },
+    "object22": {
+      "material": "material7",
+      "shape": "shape22"
+    },
+    "object23": {
+      "material": "material8",
+      "shape": "shape23"
+    },
+    "object3": {
+      "material": "material2",
+      "shape": "shape3"
+    },
+    "object4": {
+      "material": "material3",
+      "shape": "shape4"
+    },
+    "object5": {
+      "material": "material4",
+      "shape": "shape5"
+    },
+    "object6": {
+      "material": "material3",
+      "shape": "shape6"
+    },
+    "object7": {
+      "material": "material3",
+      "shape": "shape7"
+    },
+    "object8": {
+      "material": "material1",
+      "shape": "shape8"
+    },
+    "object9": {
+      "material": "material1",
+      "shape": "shape9"
+    }
+  }
+}
