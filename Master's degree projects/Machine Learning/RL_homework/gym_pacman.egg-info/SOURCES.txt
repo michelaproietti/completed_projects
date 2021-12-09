@@ -1,0 +1,6 @@
+setup.py
+gym_pacman.egg-info/PKG-INFO
+gym_pacman.egg-info/SOURCES.txt
+gym_pacman.egg-info/dependency_links.txt
+gym_pacman.egg-info/requires.txt
+gym_pacman.egg-info/top_level.txt
