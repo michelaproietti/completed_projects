@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="assets/icon/paws.png" type="image/png" />
+    <title>IG Project</title>
+    <script src="js/main.js" type="module" lang="javascript"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body id="body">
+
+    <div class="container">
+      <div class="main-box" align="justify">
+        <h1 class="title" align="center">CROSSY ROAD</h1>
+        Welcome to Crossy Road! In this game you can choose between three levels, which
+        correspond to three different environments each with different types of challenges.
+        The aim is to do as many steps as possible avoiding to hit any object.
+        You can also choose between two different times of the day in the box below.<br>
+        <br>
+        <span style="color:red">NOTE:</span>
+        WE ADVISE USING CHROME OR EDGE (CHROMIUM VERSION) FOR A BETTER EXPERIENCE.
+      </div>
+
+      <div class="title-hour-select" align="center">
+        Select the hour:
+      </div>
+
+      <div class="box-hour-select" align="center">
+        <div class="form-check form-check-inline">
+          <input type="radio" name="worldRadio" id="worldDay" value="morning" checked="true"/>
+          <label for="worldDay">Morning</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" name="worldRadio" id="worldSunset" value="sunset"/>
+          <label for="worldSunset">Night</label>
+        </div>
+      </div>
+
+      <div class="buttons-area" align="center">
+        <button id="easy" type="button" name="button" class="btn1" >Easy</button>
+        <button id="medium" type="button" name="button" class="btn2" >Medium</button>
+        <button id="hard" type="button" name="button" class="btn3" >Hard</button>
+        <button id="button_tutorial" type="button" name="button" class="btn4" >Tutorial</button>
+      </div>
+
+      <div id="easy-description" class="descriptor">
+        <h4 style="color:green">Easy level - Busy town</h4>
+        The rabbit has to cross a noisy and busy town, populated by large buildings, trees and speeding cars.
+        You lose whenever you hit a vehicle.
+      </div>
+      <div id="medium-description" class="descriptor">
+        <h4 style="color:#e5be01">Medium level - Snow bear</h4>
+        The polar bear must cross a snowy landscape studded with obstacles and icy expanses. You lose whenever you
+        hit a moving obstacle or any fixed obstacle while the bear is sliding on ice. If you press the up arrow/W button while the bear is on ice, your speed will increase.
+      </div>
+      <div id="hard-description" class="descriptor">
+        <h4 style="color:red">Hard level - Scary Halloween</h4>
+        The little girl quickly slips while sitting on the green halloween slime. You can start playing clicking the up arrow
+        /W button and then you will not be able to stop. You lose whenever you hit any fixed or moving obstacle.
+      </div>
+      <div id="button_tutorial-description" class="descriptor">
+        <h4 style="color:orangered">Tutorial - How to play</h4>
+        It is possible to move using the up/right/left arrows or the W/A/D buttons. Each step forward will increase
+        your score by 1. In all levels, you will find some coins and each of them will allow you to earn 10 extra points.
+      </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  </body>
+</html>

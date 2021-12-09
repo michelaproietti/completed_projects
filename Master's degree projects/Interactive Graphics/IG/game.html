@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+
+  <link rel="icon" href="assets/icon/paws.png" type="image/png" />
+
+  <link href="css/game.css" rel="stylesheet" type="text/css">
+
+  <script type='module' src="js/game.js"></script>
+  <script type='module' src='js/character_bunny.js'></script>
+  <script src="js/utils.js"></script>
+</head>
+
+<body>
+
+  <div id="progress" aligh='center'>
+    <img src="https://media.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif">
+  </div>
+
+  <div id="scene-container">
+    <canvas id="c"></canvas>
+  </div>
+
+  <div id="buttonsArea" class="buttons-area" align="center">
+    <button id="back" type="button" name="button" class="btn1">Back to Menu</button>
+    <button id="restart" type="button" name="button" class="btn1">Restart</button>
+    <span id="score" class="score">score: 0</span>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+    $("#buttonsArea").hide();
+    $("#c").hide();
+  </script>
+
+</body>
+
+</html>

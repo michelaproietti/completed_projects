@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset="utf-8"/>
+
+<canvas id="gl-canvas" width="512" height="512"></canvas>
+
+<p> </p>
+Handling rotation: 
+<button id = "ButtonT">Start rotation</button>
+<button id = "Direction">Change Rotation Direction</button>
+<select id="AxisRotation" size="3">
+    <option value="0">Rotate around X</option>
+    <option value="1">Rotate around Y</option>
+    <option value="2">Rotate around Z</option>
+</select>
+
+
+<p> </p>
+Handling viewing parameters:
+<p> </p>
+<div>
+Near 0.01<input id="zNearSlider" type="range"
+ min=".01" max="3" step="0.1" value="0.1" />
+ 3
+</div>
+<div>
+Far 3<input id="zFarSlider" type="range"
+ min="3" max="10" step="3.0" value="6" />
+ 10
+</div>
+<div>
+Radius 0.05<input id="radiusSlider" type="range"
+ min="0.05" max="10" step="0.1" value="5" />
+ 10
+</div>
+<div>
+Theta -90<input id="thetaSlider" type="range"
+ min="-90" max="90" step="5" value="0" />
+ 90
+</div>
+<div>
+Phi -90<input id="phiSlider" type="range"
+ min="-90" max="90" step="5" value="0" />
+ 90
+</div>
+<div>
+Field-of-view 10<input id="fovSlider" type="range"
+ min="10" max="120" step="5" value="45" />
+ 120
+</div>
+<div>
+Aspect ratio 0.5<input id="aspectSlider" type="range"
+ min="0.5" max="2" step="0.1" value="1" />
+ 2
+</div>
+
+<p> </p>
+<button id = "Reset">Reset viewing parameters</button>
+
+<p> </p>
+Turn neon light on/off: 
+<button id = "Neon">Turn on</button>
+
+<p> </p>
+Switch between per-vertex and per-fragment shading (initially per-vertex): 
+<button id = "ShadingModel">Activate per fragment shading</button>
+
+<p> </p>
+Activate/Deactivate bump texture: 
+<button id = "BumpTexture">Apply bump texture</button>
+
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+#version 300 es
+
+precision mediump float;
+
+in  vec4 aPosition;
+in  vec3 aNormal;
+in  vec2 aTexCoord;
+in  vec4 aTangent;
+
+out vec3 N, E, L, L1, L2, L3, V;
+out vec4 vColor;
+out vec2 vTexCoord;
+
+uniform vec4 uAmbientProduct11, uDiffuseProduct11, uSpecularProduct11;
+uniform vec4 uAmbientProduct21, uDiffuseProduct21, uSpecularProduct21;
+uniform vec4 uAmbientProduct31, uDiffuseProduct31, uSpecularProduct31;
+uniform vec4 uAmbientProduct, uDiffuseProduct, uSpecularProduct;
+
+uniform vec4 uLightPosition1;
+uniform vec4 uLightPosition2;
+uniform vec4 uLightPosition3;
+uniform vec4 uLightPosition;
+
+uniform float uShininess;
+uniform vec4 uColor;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+uniform mat3 uNormalMatrix;
+
+uniform bool uShadingModel;
+uniform bool uNeon;
+
+uniform bool uBumpTexture;
+
+void main() {
+    // compute vertex and light positions in eye coordinates
+    vec3 pos = (uModelViewMatrix * aPosition).xyz;
+
+    if (uBumpTexture) {
+	vec3 eyeLightPos = (uModelViewMatrix * uLightPosition).xyz;
+	
+	vec3 N = normalize(uNormalMatrix * aNormal.xyz);
+	vec3 T = normalize(uNormalMatrix * aTangent.xyz);
+	vec3 B = cross(N, T);
+	
+	L.x = dot(T, eyeLightPos-pos);
+	L.y = dot(B, eyeLightPos-pos);
+	L.z = dot(N, eyeLightPos-pos);
+	L = normalize(L);
+	
+	V.x = dot(T, -pos);
+	V.y = dot(B, -pos);
+	V.z = dot(N, -pos);
+
+	V = normalize(V);
+    } else {
+
+	if(uLightPosition.w == 0.0) L = normalize(uLightPosition.xyz);
+	else L = normalize(uLightPosition.xyz - pos);
+
+	if (uNeon) {
+    	    if(uLightPosition1.w == 0.0) L1 = normalize(uLightPosition1.xyz);
+       	    else L1 = normalize(uLightPosition1.xyz - pos);
+    	    if(uLightPosition2.w == 0.0) L2 = normalize(uLightPosition2.xyz);
+    	    else L2 = normalize(uLightPosition2.xyz - pos);
+    	    if(uLightPosition3.w == 0.0) L3 = normalize(uLightPosition3.xyz);
+    	    else L3 = normalize(uLightPosition3.xyz - pos);
+	}
+   
+	E = -normalize(pos);
+
+	// transform vertex normal into eye coordinates
+	N = normalize(uNormalMatrix * aNormal.xyz);
+
+	if (uShadingModel) {
+	    // halfway vector
+	    vec3 H = normalize(L + E);
+
+	    // Compute terms in the illumination equation
+	    // ambient component
+	    vec4 ambient = uAmbientProduct;
+
+	    // diffuse component
+	    float Kd = max(dot(L, N), 0.0);
+	    vec4 diffuse = Kd * uDiffuseProduct;
+
+	    // specular component
+	    float Ks = pow(max(dot(N, H), 0.0), uShininess);
+
+	    vec4 specular;
+
+	    if(dot(L, N) < 0.0) specular = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular = Ks * uSpecularProduct;
+
+	    if (uNeon) {
+		vec3 H1 = normalize(L1 + E);
+		vec3 H2 = normalize(L2 + E);
+		vec3 H3 = normalize(L3 + E);
+
+		ambient = ambient + uAmbientProduct11 + uAmbientProduct21 + uAmbientProduct31;
+
+
+		float Kd1 = max(dot(L1, N), 0.0);
+		float Kd2 = max(dot(L2, N), 0.0);
+		float Kd3 = max(dot(L3, N), 0.0);
+		diffuse = diffuse + Kd1*uDiffuseProduct11 + Kd2*uDiffuseProduct21 + Kd3*uDiffuseProduct31;
+
+		float Ks1 = pow(max(dot(N, H1), 0.0), uShininess);
+		float Ks2 = pow(max(dot(N, H2), 0.0), uShininess);
+		float Ks3 = pow(max(dot(N, H3), 0.0), uShininess);
+
+		vec4 specular1, specular2, specular3;
+		
+		if(dot(L1, N) < 0.0) specular1 = vec4(0.0, 0.0, 0.0, 1.0);
+		else specular1 = Ks1 * uSpecularProduct11;
+
+		if(dot(L2, N) < 0.0) specular2 = vec4(0.0, 0.0, 0.0, 1.0);
+		else specular2 = Ks2 * uSpecularProduct21;
+
+		if(dot(L3, N) < 0.0) specular3 = vec4(0.0, 0.0, 0.0, 1.0);
+		else specular3 = Ks3 * uSpecularProduct31;
+	
+		specular = specular + specular1 + specular2 + specular3;
+	    }
+	
+	    vColor = ambient + diffuse + specular;
+	    vColor.a = 1.0;
+	}
+    }
+
+    gl_Position = uProjectionMatrix * uModelViewMatrix * aPosition;
+
+    vTexCoord = aTexCoord;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec4 vColor;
+in vec2 vTexCoord;
+in vec3 N, E, L, L1, L2, L3, V;
+
+out vec4 fColor;
+
+uniform sampler2D uTextureMap;
+uniform vec4 uAmbientProduct, uDiffuseProduct, uSpecularProduct;
+uniform vec4 uAmbientProduct11, uDiffuseProduct11, uSpecularProduct11;
+uniform vec4 uAmbientProduct21, uDiffuseProduct21, uSpecularProduct21;
+uniform vec4 uAmbientProduct31, uDiffuseProduct31, uSpecularProduct31;
+uniform float uShininess;
+uniform bool uShadingModel;
+uniform bool uNeon;
+
+uniform bool uBumpTexture;
+
+void main() {
+    if (uBumpTexture) {
+	vec4 N = texture(uTextureMap, vTexCoord);
+	vec3 NN = normalize(2.0 * N.xyz - 1.0);
+	vec3 LL = normalize(L);
+	float Kd = max(dot(NN, LL), 0.0);
+
+	fColor = vec4(Kd * uDiffuseProduct.xyz, 1.0);
+    }
+    else if (uShadingModel) {
+        fColor = vColor * texture(uTextureMap, vTexCoord);
+    }
+    else {
+	vec3 H = normalize(L + E);
+
+	// Compute terms in the illumination equation
+	vec4 ambient = uAmbientProduct;
+
+	// diffuse component
+	float Kd = max(dot(L, N), 0.0);
+	vec4 diffuse = Kd * uDiffuseProduct;
+
+	// specular component
+	float Ks = pow(max(dot(N, H), 0.0), uShininess);
+
+	vec4 specular;
+
+	if(dot(L, N) < 0.0) specular = vec4(0.0, 0.0, 0.0, 1.0);
+	else specular = Ks * uSpecularProduct;
+
+	if(uNeon) {
+	    vec3 H1 = normalize(L1 + E);
+	    vec3 H2 = normalize(L2 + E);
+	    vec3 H3 = normalize(L3 + E);
+	
+	    ambient = ambient + uAmbientProduct11 + uAmbientProduct21 + uAmbientProduct31;
+
+	    float Kd1 = max(dot(L1, N), 0.0);
+	    float Kd2 = max(dot(L2, N), 0.0);
+	    float Kd3 = max(dot(L3, N), 0.0);
+	    diffuse = diffuse + Kd1*uDiffuseProduct11 + Kd2*uDiffuseProduct21 + Kd3*uDiffuseProduct31;
+
+	    float Ks1 = pow(max(dot(N, H1), 0.0), uShininess);
+	    float Ks2 = pow(max(dot(N, H2), 0.0), uShininess);
+	    float Ks3 = pow(max(dot(N, H3), 0.0), uShininess);
+
+	    vec4 specular1, specular2, specular3;
+
+	    if(dot(L1, N) < 0.0) specular1 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular1 = Ks1 * uSpecularProduct11;
+
+	    if(dot(L2, N) < 0.0) specular2 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular2 = Ks2 * uSpecularProduct21;
+
+	    if(dot(L3, N) < 0.0) specular3 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular3 = Ks3 * uSpecularProduct31;
+	
+	    specular = specular + specular1 + specular2 + specular3;
+	}
+	
+	fColor = ambient + diffuse + specular;
+	fColor.a = 1.0;
+
+	fColor = fColor * texture(uTextureMap, vTexCoord);
+    }
+}
+</script>
+
+<script id="vertex-shader-light" type="x-shader/x-vertex">
+#version 300 es
+
+precision mediump float;
+
+in  vec4 aPosition;
+in  vec3 aNormal;
+
+out vec3 N, E, L, L1, L2, L3;
+out vec4 vColor;
+
+uniform vec4 uLightPosition;
+uniform vec4 uLightPosition1;
+uniform vec4 uLightPosition2;
+uniform vec4 uLightPosition3;
+
+uniform vec4 uAmbientProduct, uDiffuseProduct, uSpecularProduct;
+uniform vec4 uAmbientProduct12, uDiffuseProduct12, uSpecularProduct12;
+uniform vec4 uAmbientProduct22, uDiffuseProduct22, uSpecularProduct22;
+uniform vec4 uAmbientProduct32, uDiffuseProduct32, uSpecularProduct32;
+
+uniform vec4 uEmissive;
+uniform float uShininess;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+uniform mat3 uNormalMatrix;
+
+uniform bool uShadingModel;
+uniform bool uNeon;
+
+void main() {
+    // compute vertex and light positions in eye coordinates
+    vec3 pos = (uModelViewMatrix * aPosition).xyz;
+
+    if(uLightPosition.w == 0.0) L = normalize(uLightPosition.xyz);
+    else L = normalize(uLightPosition.xyz - pos);
+
+
+    if (uNeon) {
+    	if(uLightPosition1.w == 0.0) L1 = normalize(uLightPosition1.xyz);
+    	else L1 = normalize(uLightPosition1.xyz - pos);
+    	if(uLightPosition2.w == 0.0) L2 = normalize(uLightPosition2.xyz);
+    	else L2 = normalize(uLightPosition2.xyz - pos);
+    	if(uLightPosition3.w == 0.0) L3 = normalize(uLightPosition3.xyz);
+    	else L3 = normalize(uLightPosition3.xyz - pos);
+    }
+   
+    E = normalize(-pos);
+
+    // transform vertex normal into eye coordinates
+    N = normalize(uNormalMatrix * aNormal.xyz);
+
+    if (uShadingModel) {
+	// halfway vector
+	vec3 H = normalize(L + E);
+
+	// Compute terms in the illumination equation
+	vec4 ambient = uAmbientProduct;
+
+	float Kd = max(dot(L, N), 0.0);
+	vec4 diffuse = Kd * uDiffuseProduct;
+
+	// specular component
+	float Ks = pow(max(dot(N, H), 0.0), uShininess);
+
+	vec4 specular;
+
+	if(dot(L, N) < 0.0) specular = vec4(0.0, 0.0, 0.0, 1.0);
+	else specular = Ks * uSpecularProduct;
+
+	if (uNeon) {
+	    vec3 H1 = normalize(L1 + E);
+	    vec3 H2 = normalize(L2 + E);
+	    vec3 H3 = normalize(L3 + E);
+
+	    ambient = ambient + uAmbientProduct12 + uAmbientProduct22 + uAmbientProduct32;
+
+	    float Kd1 = max(dot(L1, N), 0.0);
+	    float Kd2 = max(dot(L2, N), 0.0);
+	    float Kd3 = max(dot(L3, N), 0.0);
+	    diffuse = diffuse + Kd1*uDiffuseProduct12 + Kd2*uDiffuseProduct22 + Kd3*uDiffuseProduct32;
+
+	    float Ks1 = pow(max(dot(N, H1), 0.0), uShininess);
+	    float Ks2 = pow(max(dot(N, H2), 0.0), uShininess);
+	    float Ks3 = pow(max(dot(N, H3), 0.0), uShininess);
+
+	    vec4 specular1, specular2, specular3;
+
+	    if(dot(L1, N) < 0.0) specular1 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular1 = Ks1 * uSpecularProduct12;
+
+	    if(dot(L2, N) < 0.0) specular2 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular2 = Ks2 * uSpecularProduct22;
+
+	    if(dot(L3, N) < 0.0) specular3 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular3 = Ks3 * uSpecularProduct32;
+	
+	    specular = specular + specular1 + specular2 + specular3 + uEmissive;
+	}
+	
+	vColor = ambient + diffuse + specular;
+	vColor.a = 0.6;
+    }
+
+    gl_Position = uProjectionMatrix * uModelViewMatrix * aPosition;
+
+}
+</script>
+
+<script id="fragment-shader-light" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec4 vColor;
+in vec3 N, E, L, L1, L2, L3;
+
+out vec4 fColor;
+
+uniform vec4 uAmbientProduct12, uDiffuseProduct12, uSpecularProduct12;
+uniform vec4 uAmbientProduct22, uDiffuseProduct22, uSpecularProduct22;
+uniform vec4 uAmbientProduct32, uDiffuseProduct32, uSpecularProduct32;
+uniform vec4 uAmbientProduct, uDiffuseProduct, uSpecularProduct;
+uniform float uShininess;
+uniform vec4 uEmissive;
+uniform bool uShadingModel;
+uniform bool uNeon;
+
+void main() {
+    if (uShadingModel) {
+        fColor = vColor;
+    }
+    else {
+	vec3 H = normalize(L + E);
+
+	// Compute terms in the illumination equation
+	vec4 ambient = uAmbientProduct;
+
+	float Kd = max(dot(L, N), 0.0);
+	vec4 diffuse = Kd * uDiffuseProduct;
+
+	// specular component
+	float Ks = pow(max(dot(N, H), 0.0), uShininess);
+
+	vec4 specular;
+
+	if(dot(L, N) < 0.0) specular = vec4(0.0, 0.0, 0.0, 1.0);
+	else specular = Ks * uSpecularProduct;
+
+	if (uNeon) {
+	    vec3 H1 = normalize(L1 + E);
+	    vec3 H2 = normalize(L2 + E);
+	    vec3 H3 = normalize(L3 + E);
+
+	    ambient = ambient + uAmbientProduct12 + uAmbientProduct22 + uAmbientProduct32;
+
+	    float Kd1 = max(dot(L1, N), 0.0);
+	    float Kd2 = max(dot(L2, N), 0.0);
+	    float Kd3 = max(dot(L3, N), 0.0);
+	    diffuse = diffuse + Kd1*uDiffuseProduct12 + Kd2*uDiffuseProduct22 + Kd3*uDiffuseProduct32;
+
+	    float Ks1 = pow(max(dot(N, H1), 0.0), uShininess);
+	    float Ks2 = pow(max(dot(N, H2), 0.0), uShininess);
+	    float Ks3 = pow(max(dot(N, H3), 0.0), uShininess);
+
+	    vec4 specular1, specular2, specular3;
+
+	    if(dot(L1, N) < 0.0) specular1 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular1 = Ks1 * uSpecularProduct12;
+
+	    if(dot(L2, N) < 0.0) specular2 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular2 = Ks2 * uSpecularProduct22;
+
+	    if(dot(L3, N) < 0.0) specular3 = vec4(0.0, 0.0, 0.0, 1.0);
+	    else specular3 = Ks3 * uSpecularProduct32;
+	
+	    specular = specular + specular1 + specular2 + specular3 + uEmissive;
+	}
+	
+	fColor = ambient + diffuse + specular;
+	fColor.a = 0.6;
+    }
+}
+</script>
+
+<script src="../Common/initShaders.js"></script>
+<script src="../Common/MVnew.js"></script>
+<script src="Homework1.js"></script>
+
+
+</body>
+</html>

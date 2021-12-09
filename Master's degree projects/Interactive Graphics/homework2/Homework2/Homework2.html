@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		#child {
+			width: 20%;
+			float: right;
+			padding: 10px;
+		}
+	</style>
+<meta charset="utf-8"/>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+#version 300 es
+
+precision mediump float;
+
+in vec4 aPosition;
+in vec2 aTexCoord;
+in  vec4 aTangent;
+in  vec3 aNormal;
+in float aFaceId;
+
+out vec2 vTexCoord;
+out float vFaceId;
+out vec3 L1, L2, V, E, N;
+
+uniform highp int objectId;
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+uniform mat3 uNormalMatrix;
+
+uniform vec4 uLightPosition1;
+uniform vec4 uLightPosition2;
+
+void main() {
+	vec3 eyePosition = (modelViewMatrix*aPosition).xyz;
+
+    if (objectId == 4 || objectId == 5) {							// sheep's body, tail and upper legs (bump)
+		vec3 eyeLightPos1 = (modelViewMatrix*uLightPosition1).xyz;
+		vec3 eyeLightPos2 = (modelViewMatrix*uLightPosition2).xyz;
+
+		/* normal, tangent and binormal in eye coordinates */
+
+		vec3 N = normalize(uNormalMatrix*aNormal.xyz);
+		vec3 T  = normalize(uNormalMatrix*aTangent.xyz);
+		vec3 B = cross(N, T);
+
+		/* light vector in texture space */
+
+		L1.x = dot(T, eyeLightPos1-eyePosition);
+		L1.y = dot(B, eyeLightPos1-eyePosition);
+		L1.z = dot(N, eyeLightPos1-eyePosition);
+
+		L1 = normalize(L1);
+
+		L2.x = dot(T, eyeLightPos2-eyePosition);
+		L2.y = dot(B, eyeLightPos2-eyePosition);
+		L2.z = dot(N, eyeLightPos2-eyePosition);
+
+		L2 = normalize(L2);
+
+		/* view vector in texture space */
+
+		V.x = dot(T, -eyePosition);
+		V.y = dot(B, -eyePosition);
+		V.z = dot(N, -eyePosition);
+
+		V = normalize(V);
+    } else {
+		if(uLightPosition1.w == 0.0) L1 = normalize((modelViewMatrix*uLightPosition1).xyz);
+		else L1 = normalize((modelViewMatrix*uLightPosition1).xyz - eyePosition);
+
+		if(uLightPosition2.w == 0.0) L2 = normalize((modelViewMatrix*uLightPosition2).xyz);
+		else L2 = normalize((modelViewMatrix*uLightPosition2).xyz - eyePosition);
+
+		E = -normalize(eyePosition);
+
+		N = normalize(uNormalMatrix * aNormal.xyz);
+	}
+
+    gl_Position = projectionMatrix * modelViewMatrix * aPosition;
+    vTexCoord = aTexCoord;
+    vFaceId = aFaceId;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec2 vTexCoord;
+in float vFaceId;
+in vec3 L1, L2, V, N, E;
+
+out vec4 fColor;
+
+uniform sampler2D uTextureMapFace;
+uniform sampler2D uTextureMapFace1;
+uniform sampler2D uTextureMapGrass;
+uniform sampler2D uTextureMapWood;
+uniform sampler2D uTextureMapBump;
+uniform sampler2D uTextureMapBump1;
+
+uniform highp int objectId;
+uniform highp int uFaceTexture;
+
+uniform vec4 uAmbientProduct1, uDiffuseProduct1, uSpecularProduct1;
+uniform vec4 uAmbientProduct2, uDiffuseProduct2, uSpecularProduct2;
+uniform vec4 uAmbientProduct3, uDiffuseProduct3, uSpecularProduct3;
+uniform float uShininess1, uShininess2, uShininess3;
+
+void main() {
+    if (objectId == 4 || objectId == 5) {						//sheep's body (4), tail and upper legs (6)
+		vec4 N;
+
+		if (objectId == 4)
+			N = texture(uTextureMapBump, vTexCoord);
+		else
+			N = texture(uTextureMapBump1, vTexCoord);
+
+		vec3 NN =  normalize(2.0 * N.xyz - 1.0);
+		vec3 LL1 = normalize(L1);
+		float Kd1 = max(dot(NN, LL1), 0.0);
+		vec3 LL2 = normalize(L2);
+		float Kd2 = max(dot(NN, LL2), 0.0);
+
+		fColor = vec4((Kd1+Kd2)*uDiffuseProduct1.xyz, 1.0);
+
+    } else {
+		vec3 H1 = normalize(L1 + E);
+	    vec3 H2 = normalize(L2 + E);
+
+		if (objectId == 0 || objectId == 3) {						// sheep (not bump)
+			vec4 ambient = uAmbientProduct1 + uAmbientProduct1;
+
+			float Kd1 = max(dot(L1, N), 0.0);
+	    	float Kd2 = max(dot(L2, N), 0.0);
+
+			vec4 diffuse = (Kd1 + Kd2) * uDiffuseProduct1;
+
+			float Ks1 = pow(max(dot(N, H1), 0.0), uShininess1);
+	    	float Ks2 = pow(max(dot(N, H2), 0.0), uShininess1);
+
+			vec4 specular1, specular2;
+			if(dot(L1, N) < 0.0) specular1 = vec4(0.0, 0.0, 0.0, 1.0);
+	    	else specular1 = Ks1 * uSpecularProduct1;
+			if(dot(L2, N) < 0.0) specular2 = vec4(0.0, 0.0, 0.0, 1.0);
+	    	else specular2 = Ks2 * uSpecularProduct1;
+			
+			vec4 specular = specular1 + specular2;
+
+			fColor = ambient + diffuse + specular;
+			fColor.a = 1.0;
+
+			if (uFaceTexture == 1)
+				fColor = fColor * texture(uTextureMapFace, vTexCoord);	// sheep's face
+			else if (uFaceTexture == 2)
+				fColor = fColor * texture(uTextureMapFace1, vTexCoord);
+
+		} else if (objectId == 1) {					// grass
+			vec4 ambient = uAmbientProduct2 + uAmbientProduct2;
+
+			float Kd1 = max(dot(L1, N), 0.0);
+	    	float Kd2 = max(dot(L2, N), 0.0);
+
+			vec4 diffuse = (Kd1 + Kd2) * uDiffuseProduct2;
+
+			float Ks1 = pow(max(dot(N, H1), 0.0), uShininess2);
+	    	float Ks2 = pow(max(dot(N, H2), 0.0), uShininess2);
+
+			vec4 specular1, specular2;
+			if(dot(L1, N) < 0.0) specular1 = vec4(0.0, 0.0, 0.0, 1.0);
+	    	else specular1 = Ks1 * uSpecularProduct2;
+			if(dot(L2, N) < 0.0) specular2 = vec4(0.0, 0.0, 0.0, 1.0);
+	    	else specular2 = Ks2 * uSpecularProduct2;
+			
+			vec4 specular = specular1 + specular2;
+
+			fColor = ambient + diffuse + specular;
+			fColor.a = 1.0;
+			fColor = fColor * texture(uTextureMapGrass, vTexCoord);
+
+		} else if (objectId == 2) {										// fence
+			vec4 ambient = uAmbientProduct3 + uAmbientProduct3;
+
+			float Kd1 = max(dot(L1, N), 0.0);
+	    	float Kd2 = max(dot(L2, N), 0.0);
+
+			vec4 diffuse = (Kd1 + Kd2) * uDiffuseProduct3;
+
+			float Ks1 = pow(max(dot(N, H1), 0.0), uShininess3);
+	    	float Ks2 = pow(max(dot(N, H2), 0.0), uShininess3);
+
+			vec4 specular1, specular2;
+			if(dot(L1, N) < 0.0) specular1 = vec4(0.0, 0.0, 0.0, 1.0);
+	    	else specular1 = Ks1 * uSpecularProduct3;
+			if(dot(L2, N) < 0.0) specular2 = vec4(0.0, 0.0, 0.0, 1.0);
+	    	else specular2 = Ks2 * uSpecularProduct3;
+			
+			vec4 specular = specular1 + specular2;
+
+			fColor = ambient + diffuse + specular;
+			fColor.a = 1.0;
+
+			fColor = fColor * texture(uTextureMapWood, vTexCoord);
+		}
+	}
+}
+</script>
+
+<script type="text/javascript" src="../Common/InitShaders.js"></script>
+<script type="text/javascript" src="../Common/MVnew.js"></script>
+<script type="text/javascript" src="Homework2.js"></script>
+
+<img id = "texImage1" src = "grass.jpg" hidden></img>
+<img id = "texImage2" src = "wood.jpeg" hidden></img>
+
+<body>
+
+<div id="child">
+		<button id= "Start">Start Animation</button>
+	<p></p>
+	<div>
+	Depth .05<input id="depthSlider" type="range"
+		min=".05" max="20" step="0.1" value="2" />
+		20
+	</div>
+	<p></p>
+	<div>
+	Radius 0.0<input id="radiusSlider" type="range"
+		min="0.0" max="30" step="0.1" value="1" />
+		30
+	</div>
+	<p></p>
+	<div>
+	Theta -180<input id="thetaSlider" type="range"
+		min="-180" max="180" step="5" value="0" />
+		180
+	</div>
+	<p></p>
+	<div>
+	Phi -180<input id="phiSlider" type="range"
+		min="-180" max="180" step="5" value="0" />
+		180
+	</div>
+	<p></p>
+	<div>
+	Width 0<input id="widthSlider" type="range"
+		min="0" max="100" step="1" value="10" />
+		100
+	</div>
+	<p></p>
+	<div>
+	Height 0<input id="heightSlider" type="range"
+		min="0" max="100" step="1" value="10" />
+		100
+	</div>
+	<p></p>
+	<button id= "Reset">Reset</button>
+</div>
+
+<canvas id="gl-canvas" width="768" height="768">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+</body>
+</html>

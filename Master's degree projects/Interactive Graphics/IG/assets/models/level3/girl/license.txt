@@ -1,0 +1,11 @@
+Model Information:
+* title:	Summer girl
+* source:	https://sketchfab.com/3d-models/summer-girl-619cfd5b08ca46589ed3ad9f6154179f
+* author:	xenia.lipilina (https://sketchfab.com/xenia.lipilina)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Summer girl" (https://sketchfab.com/3d-models/summer-girl-619cfd5b08ca46589ed3ad9f6154179f) by xenia.lipilina (https://sketchfab.com/xenia.lipilina) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

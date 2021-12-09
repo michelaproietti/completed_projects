@@ -1,0 +1,17 @@
+# Created by Kenney (www.kenney.nl) 
+
+newmtl packageWhite
+Ka 0.000000 0.000000 0.000000 
+Kd 0.2 0.2 0.9 
+Ks 0.20000 0.2000 0.20000 
+
+newmtl ribbon
+Ka 0.000000 0.000000 0.000000 
+Kd 1 0.2 0.2 
+Ks 0.20000 0.20000 0.20000 
+
+newmtl _defaultMat
+Ka 0.000000 0.000000 0.000000 
+Kd 0 0 1 
+Ks 0.20000 0.20000 0.20000 
+

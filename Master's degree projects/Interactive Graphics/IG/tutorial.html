@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial</title>
+    <link rel="icon" href="assets/icon/paws.png" type="image/png" />
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <div class="box" align="justify">
+      <h1 class="title" align="center">TUTORIAL</h1>
+      How to play.
+    </div>
+    <div class="buttons-area" align="center">
+      <button id="easy" type="button" name="button" class="btn1" onclick="location.href='./game.html'">Easy</button>
+      <button id="medium" type="button" name="button" class="btn2" onclick="location.href='./game.html'">Medium</button>
+      <button id="hard" type="button" name="button" class="btn3" onclick="location.href='./game.html'">Hard</button>
+      <button type="button" name="button" class="btn4" onclick="location.href='./main.html'">Home</button>
+    </div>
+
+    <div id="easy-description" class="descriptor">
+      <h4 style="color:green">Easy level - Busy town</h4>
+      The first environment includes a rabbit who has to cross a noisy and busy
+      town, populated by large buildings and trees.
+    </div>
+    <div id="medium-description" class="descriptor">
+      <h4 style="color:yellow">Medium level - Title</h4>
+      The first environment includes a rabbit who has to cross a noisy and busy
+      town, populated by large buildings and trees.
+    </div>
+    <div id="hard-description" class="descriptor">
+      <h4 style="color:red">Hard level - Title</h4>
+      The first environment includes a rabbit who has to cross a noisy and busy
+      town, populated by large buildings and trees.
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+      $("#easy-description").hide();
+      $("#medium-description").hide();
+      $("#hard-description").hide();
+
+      $("#easy").mouseover(function() {
+        $("#easy-description").fadeIn(1000);
+      });
+      $("#easy").mouseout(function() {
+        $("#easy-description").hide();
+      });
+
+      $("#medium").mouseover(function() {
+        $("#medium-description").fadeIn(1000);
+      });
+      $("#medium").mouseout(function() {
+        $("#medium-description").hide();
+      });
+
+      $("#hard").mouseover(function() {
+        $("#hard-description").fadeIn(1000);
+      });
+      $("#hard").mouseout(function() {
+        $("#hard-description").hide();
+      });
+
+    </script>
+
+
+  </body>
+</html>

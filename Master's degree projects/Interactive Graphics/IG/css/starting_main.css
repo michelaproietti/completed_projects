@@ -1,0 +1,62 @@
+body {
+  background: lightgray;
+}
+
+.box {
+  width: 800px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 0px 20px 0px 20px;
+  margin: 0 auto;
+  background: skyblue;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 60px;
+}
+
+.descriptor {
+  width: 800px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 0px 20px 0px 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: skyblue;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.buttons-area {
+  margin-top: 20px;
+}
+
+button {
+  width: 180px;
+  height: 70px;
+  border-radius: 0px 20px 0px 20px;
+  margin-right: 20px;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 20px;
+}
+.btn1 {
+  border: 2px solid green;
+  background: lightgreen;
+}
+.btn2 {
+  border: 2px solid #e5be01;
+  background: yellow;
+}
+.btn3 {
+  border: 2px solid #800000;
+  background: red;
+}
+.btn4 {
+  border: 2px solid red;
+  background: orange;
+}

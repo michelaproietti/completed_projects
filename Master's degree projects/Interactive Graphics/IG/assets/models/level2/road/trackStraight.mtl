@@ -1,0 +1,17 @@
+# Created by Kenney (www.kenney.nl) 
+
+newmtl wood
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8313726 0.5411765 0.3607843 
+Ks 0.0 0.0 0.0 
+
+newmtl stone
+Ka 0.000000 0.000000 0.000000 
+Kd 0.4 0.4 0.4
+Ks 0.40 0.4 0.40
+
+newmtl _defaultMat
+Ka 0.000000 0.000000 0.000000 
+Kd 0 0 0 
+Ks 0.0 0.0 0.0
+

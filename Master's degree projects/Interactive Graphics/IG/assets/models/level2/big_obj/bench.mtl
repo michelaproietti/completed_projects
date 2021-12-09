@@ -1,0 +1,12 @@
+# Created by Kenney (www.kenney.nl) 
+
+newmtl stone
+Ka 0.000000 0.000000 0.000000 
+Kd 0.44 0.44 0.55 
+Ks 0.0 0.0 0.0
+
+newmtl woodDark
+Ka 0.000000 0.000000 0.000000 
+Kd 0.6196079 0.4 0.2666667 
+Ks 0.0 0.0 0.0
+
