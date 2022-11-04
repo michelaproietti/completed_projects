@@ -14,7 +14,7 @@ The proposed project is a re-implementation of the famous "Crossy Road" game. It
 
 ## Game Link
 
-### [Click here to play the game]([https://sapienzainteractivegraphicscourse.github.io/final-project-mpps-team/](https://github.com/michelaproietti/completed_projects/blob/main/Master's%20degree%20projects/Interactive%20Graphics/IG/main.html).
+### [Click here to play the game](https://github.com/michelaproietti/completed_projects/blob/main/Master's%20degree%20projects/Interactive%20Graphics/IG/main.html).
 
 ### Report
 
