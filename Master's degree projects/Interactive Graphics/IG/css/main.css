@@ -12,7 +12,7 @@ div.container {
 }
 
 div.main-box {
-  width: 55%;
+  width: 70%;
 
   border: 2px solid black;
   border-radius: 0px 20px 0px 20px;
@@ -32,7 +32,7 @@ div.title-hour-select {
 }
 
 div.box-hour-select {
-  width: 55%;
+  width: 70%;
   border: 2px solid black;
   border-radius: 0px 20px 0px 20px;
   margin: 0 auto;
@@ -75,7 +75,7 @@ button {
 }
 
 div.descriptor {
-  width: 55%;
+  width: 70%;
   border: 2px solid black;
   border-radius: 0px 20px 0px 20px;
   margin: 0 auto;
