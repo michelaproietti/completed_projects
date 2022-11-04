@@ -1,6 +1,6 @@
 # Elective in Artificial Intelligence
 
-<img src="[https://github.com/favicon.ico](https://www.gizlogic.com/wp-content/uploads/2015/06/Robot-Pepper.jpg)" width="60">
+![Pepper robot](https://th.bing.com/th/id/R.e60021353905ca6760f03bbc100c2f8c?rik=j%2f2wtT0pY0WCyQ&riu=http%3a%2f%2finfozene.com%2fblogging%2fwp-content%2fuploads%2f2017%2f09%2fSoftbank-humanoid-pepper-robot-427x640.jpg&ehk=rwkBpazEpC3zfepxlsev%2b%2fwZp3ZIWmRc59exsirb9EU%3d&risl=&pid=ImgRaw&r=0)
 
 The purpose of the project is to develop a social and interactive robot for people’s entertainment. It allows to play a cooperative version of the Tower of Hanoi game, in which the user and the robot execute a move alternately. The robot is also able to advise the person on the most appropriate level for him, by collecting some data about the user through an initial phase of questions. Communication between the two agents has been implemented in different ways. Several frameworks were exploited, including pepper_tools, AIPlan4EU, three.js and additional web development tools in order to carry out the robot’s relational model, its intelligence to solve the game and a visual communication interface for the user in order to interact with the game.
 
