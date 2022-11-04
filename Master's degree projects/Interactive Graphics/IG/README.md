@@ -16,6 +16,23 @@ The proposed project is a re-implementation of the famous "Crossy Road" game. It
 
 ### [Click here to play the game](https://github.com/michelaproietti/completed_projects/blob/main/Master's%20degree%20projects/Interactive%20Graphics/IG/main.html).
 
+## Trailers
+
+Level 1:
+<p align="left">
+<img src="assets/examples/level1.gif" width="60%"/>
+</p>
+
+Level 2:
+<p align="left">
+<img src="assets/examples/level2.gif" width="60%"/>
+</p>
+
+Level 3:
+<p align="left">
+<img src="assets/examples/level3.gif" width="60%"/>
+</p>
+
 ### Report
 
 For further details, the report of the project is available in this repository at [this link](https://github.com/michelaproietti/completed_projects/blob/main/Master's%20degree%20projects/Interactive%20Graphics/IG/IG_Report.pdf).
