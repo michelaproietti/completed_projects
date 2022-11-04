@@ -67,8 +67,4 @@ $(document).ready(function() {
         location.href='./game.html'
     });
 
-    $("#button_tutorial").click(function(){
-        //location.href='./tutorial.html'
-    });
-
 });
