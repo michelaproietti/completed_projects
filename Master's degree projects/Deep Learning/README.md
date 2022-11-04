@@ -12,7 +12,7 @@ It was implemented using PyTorch and other libraries, such as Scikit-learn, PIL 
 
 **Since this task is very complex and requires a huge amount of data, we do not focus on the obtained results but rather on the implementative challenges we encountered and on a comparison between the different implemented approaches.**
 
-**Authors**:
+##Authors:
 * Federica Cocci
 * Michela Proietti
 * Sofia Santilli
