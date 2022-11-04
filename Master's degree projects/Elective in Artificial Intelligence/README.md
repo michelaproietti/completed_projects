@@ -2,6 +2,8 @@
 
 ## [Click here to watch a video summary](https://www.youtube.com/watch?v=XQVYMuwKDL8)
 
+**Note**: Due to HTML versions mismatches (the robot software is quite old) the HTML pages did not change on the robot's tablet, so we played the game on an external computer while still implementing the verbal and gestural interaction on the robot.
+
 ## Introduction
 
 The purpose of the project is to develop a social and interactive robot for people’s entertainment. It allows to play a cooperative version of the Tower of Hanoi game, in which the user and the robot execute a move alternately. The robot is also able to advise the person on the most appropriate level for him, by collecting some data about the user through an initial phase of questions. Communication between the two agents has been implemented in different ways. Several frameworks were exploited, including pepper_tools, AIPlan4EU, three.js and additional web development tools in order to carry out the robot’s relational model, its intelligence to solve the game and a visual communication interface for the user in order to interact with the game.
