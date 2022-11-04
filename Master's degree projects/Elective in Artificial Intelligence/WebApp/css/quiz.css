@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    font-family: monospace;
+    background-image: url("../assets/textures/img_attesa_quiz.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    
+  }
+  
+  div.containerGame {
+    width: 100%;
+    height: 100%;
+  }
+  
+  div.main-boxStart {
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 0px;
+    background: white;
+    padding: 15px;
+    margin: auto;
+  }
+
+  h2.title {
+    font-size: 20px;
+  }
+
+  div.butStart-game {
+    width: 55%;
+    margin: 0 auto;
+  }
+  
+  button {
+    width: 25%;
+    border-radius: 20px 20px 20px 20px;
+    padding: 20px;
+    font-size: 30px;
+    vertical-align: middle;
+    margin-top: 50%;
+  }
+  
+  .btnGame {
+    border: 2px solid green;
+    background: lightgreen;
+    margin-right: 5%;
+    font-weight: bold;
+    color: green
+  }

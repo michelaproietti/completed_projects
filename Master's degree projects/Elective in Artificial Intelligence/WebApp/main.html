@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="assets/icon/tower.png" type="image/png"/>
+    <title>Tower of Hanoi</title>
+    <script src="js/main.js" type="module" lang="javascript"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body id="body">
+
+    <div class="container">
+      <div class="main-box" align="justify">
+        <h1 class="title" align="center">TOWER OF HANOI</h1>
+        <h2 class="title" align="center">Hello! Let's have fun!</h2>
+      </div>
+
+      <div class="levels-area" align="center">
+        <button id="easy" type="button" name="button" class="btn1" >Easy<br />3 disks</button>
+        <button id="medium" type="button" name="button" class="btn2" >Medium<br />5 disks</button>
+        <button id="hard" type="button" name="button" class="btn3" >Hard<br />7 disks</button>
+      </div>
+
+      <div align="center">
+        <span id="pepperText">Pepper IP:</span>
+        <td><input type="text" name="IP" id="IP" placeholder="" width=240 height="300"></td>
+        <button id="buttonIP" class="buttonIP">Submit</button>
+      </div>
+
+      <div class="tutorial-area" align="center">
+        <button id="button_tutorial" type="button" name="button" class="btn4" >Tutorial</button>
+      </div>
+
+
+      <div id="button_tutorial-description" class="descriptor">
+        <h4 style="color:orangered">Tutorial - How to play</h4>
+        The goal of the puzzle is to move all the disks from the leftmost peg 
+        to the rightmost peg, adhering to the following rules: Move only one disk 
+        at the time. A larger disk CANNOT be placed on top of a smaller disk.
+      </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  </body>
+</html>

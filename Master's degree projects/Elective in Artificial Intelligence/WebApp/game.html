@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+
+  <link rel="icon" href="assets/icon/tower.png" type="image/png" />
+
+  <link href="css/game.css" rel="stylesheet" type="text/css">
+
+  <script type='module' src="js/game.js"></script>
+  <script type="module" src="js/utils.js"></script>
+  <script type="module" src="js/models.js"></script>
+</head>
+
+<body>
+    
+  <div id="scene-container">
+    <canvas id="c"></canvas>
+  </div>
+
+  <div id="buttonsArea" class="buttons-area" align="center">
+    <button id="back" type="button" name="button" class="btn1">Back</button>
+    <button id="restart" type="button" name="button" class="btn1">Restart</button>
+    <button id="exit" type="button" name="button" class="btn1">Exit</button>
+  </div>
+
+  <div id="infoBanner" class="main-box" align="justify">
+    <h2 id=titleBanner" class="title" align="center"></h2>
+  </div>
+
+  <div id="buttonsChoiceArea" class="buttons-choice-area" align="center">
+    <button id="leftChoice" type="button" name="button" class="btn1">Pick</button>
+    <button id="centerChoice" type="button" name="button" class="btn1">Pick</button>
+    <button id="rightChoice" type="button" name="button" class="btn1">Pick</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+</body>
+
+</html>

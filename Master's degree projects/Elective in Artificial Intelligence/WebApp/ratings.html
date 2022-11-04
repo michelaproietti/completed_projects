@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User's feedback</title>
+    <link rel="stylesheet" href="css/ratings.css">
+    <link rel="icon" href="assets/icon/tower.png" type="image/png" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> <!--Star icon-->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/ratings.js" type="module"></script>
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="text-box" align="center">
+            <span style="color:white">Thanks for playing with me!</span>
+        </div>
+
+        <div class="text-enjoy" align="center">
+            <span style="color:white">How much did you enjoy the game?</span>
+        </div>
+
+        <div class="stars" align="center">
+            <form action="">
+                <input class="star star-5" id="star-5" type="radio" name="star"/>
+                <label class="star star-5" for="star-5"></label>
+                <input class="star star-4" id="star-4" type="radio" name="star"/>
+                <label class="star star-4" for="star-4"></label>
+                <input class="star star-3" id="star-3" type="radio" name="star"/>
+                <label class="star star-3" for="star-3"></label>
+                <input class="star star-2" id="star-2" type="radio" name="star"/>
+                <label class="star star-2" for="star-2"></label>
+                <input class="star star-1" id="star-1" type="radio" name="star"/>
+                <label class="star star-1" for="star-1"></label>
+            </form>
+        </div>
+
+        <div class="text-enjoy" align="center">
+            <span style="color:white">How difficult was it for you?</span>
+        </div>
+
+        <div class="rounds" align="center">
+            <form action="">
+                <input class="round round-5" id="round-5" type="radio" name="round"/>
+                <label class="round round-5" for="round-5"></label>
+                <input class="round round-4" id="round-4" type="radio" name="round"/>
+                <label class="round round-4" for="round-4"></label>
+                <input class="round round-3" id="round-3" type="radio" name="round"/>
+                <label class="round round-3" for="round-3"></label>
+                <input class="round round-2" id="round-2" type="radio" name="round"/>
+                <label class="round round-2" for="round-2"></label>
+                <input class="round round-1" id="round-1" type="radio" name="round"/>
+                <label class="round round-1" for="round-1"></label>
+            </form>
+        </div>
+
+        <div class="buttons-area" align="center">
+            <button id="restart" type="button" name="button" class="btn1" onclick="location.href='game.html'">Play Again</button>
+            <button id="exit" type="button" name="button" class="btn1" onclick="location.href='starting_page.html'">Exit</button>
+        </div>
+    </div>
+  </body>
+</html>
